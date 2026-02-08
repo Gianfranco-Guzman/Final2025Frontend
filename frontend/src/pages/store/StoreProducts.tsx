@@ -140,7 +140,7 @@ export default function StoreProducts() {
           <p className="store-muted">
             {productStatus === "success"
               ? `${filteredProducts.length} productos encontrados`
-              : "Cargando productos del backend"}
+              : "Cargando productos..."}
           </p>
         </div>
 

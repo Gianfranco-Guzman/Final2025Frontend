@@ -166,7 +166,7 @@ export default function StoreHome() {
       {status === "error" ? (
         <div className="store-card store-empty-state">
           <h3>No pudimos cargar el home</h3>
-          <p>Revisa que el backend esté disponible para mostrar los productos reales.</p>
+          <p>No pudimos cargar los productos por ahora. Intentá nuevamente en unos minutos.</p>
         </div>
       ) : null}
 

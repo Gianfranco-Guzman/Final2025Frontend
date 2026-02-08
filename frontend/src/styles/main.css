@@ -354,7 +354,7 @@ body {
 
 .store-topbar {
   display: grid;
-  grid-template-columns: auto minmax(240px, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   gap: 24px;
   align-items: center;
   padding: 18px 32px;
@@ -1058,6 +1058,7 @@ body {
   color: #e2e8f0;
   font-size: 13px;
   font-weight: 600;
+  min-width: 0;
   width: 100%;
   max-width: 520px;
 }
@@ -1714,6 +1715,37 @@ body {
 }
 
 @media (max-width: 768px) {
+  .store-topbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "brand auth"
+      "search search";
+    gap: 12px;
+    padding: 14px 16px;
+  }
+
+  .store-brand {
+    grid-area: brand;
+  }
+
+  .store-search {
+    grid-area: search;
+    max-width: none;
+  }
+
+  .store-auth {
+    grid-area: auth;
+    justify-self: end;
+    gap: 8px;
+  }
+
+  .store-cart-button,
+  .store-ghost,
+  .store-button {
+    min-height: 36px;
+    padding: 8px 12px;
+  }
+
   .store-scroll-top {
     right: 14px;
     bottom: 14px;
